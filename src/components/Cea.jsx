@@ -1,58 +1,71 @@
+import React from 'react'
 import { comicM, flashCard, educationalB } from "../assets";
 import PurchaseBut from "./Buttons/Purchase";
 
- export const Cea = () => {
-     return (
-         <>
-         <div className="px-24 py-16 ">
-              <div className="grid grid-cols-12 items-center py-6 gap-[93px] bg-[#FEF7E0] rounded-2xl my-6">
-                  
-                  <div className=" col-span-5 ">
-                      <h6 className="text-[32px] font-bold w-[381px] pl-[48px]">Comic Magazine teaching kids soft skills</h6> 
-                      <p className=" font-light  text-[16px] w-[382px] pl-[48px]">We prepare young minds for an innovative future by igniting imagination, fostering essential soft skills, and providing engaging hands-on learning experiences in coding, STEM, and interactive classes.</p>   
-                       
-                        
-                 </div> 
-                     
-                  <div className="col-span-7">
-                         <img src={comicM} alt="" />
-                        
-                    </div>
-                
-              </div>
+export const Cea = () => {
+  return (
+    <div className="px-6 sm:px-12 lg:px-24 py-8 sm:py-12 lg:py-16">
 
-              <div className="grid grid-cols-12 items-center py-6 bg-[#EDEFFF] rounded-2xl gap-[93px] my-6">
-                  <div className="col-span-7">
-                      <img src={educationalB} alt="" className="pl-[48px]"/>
-                  </div>
-                     
-                 <div className="words col-span-5">
-                      <h6 className="text-[32px] font-bold w-[381px] ">Educational Books Teaching Tech, Business, Economics & Skills</h6> 
-                         <p className="font-light  text-[16px] w-[382px]">We prepare young minds for an innovative future by igniting imagination, fostering essential soft skills, and providing engaging hands-on learning experiences in coding, STEM, and interactive classes.</p> 
-                         <PurchaseBut />
-                </div> 
+      {/* Card 1 — Comic Magazine */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 items-center py-6 gap-6 lg:gap-[93px] bg-[#FEF7E0] rounded-2xl my-6">
 
-                  
+        <div className="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left px-6 lg:pl-[48px] lg:pr-0">
+          <h6 className="text-2xl sm:text-3xl lg:text-[32px] font-bold max-w-full lg:w-[381px]">
+            Comic Magazine teaching kids soft skills
+          </h6>
+          <p className="font-light text-sm sm:text-base lg:text-[16px] max-w-full lg:w-[382px] mt-3">
+            We prepare young minds for an innovative future by igniting imagination, fostering essential soft skills, and providing engaging hands-on learning experiences in coding, STEM, and interactive classes.
+          </p>
+        </div>
 
-                  
-              </div>
+        <div className="lg:col-span-7 flex justify-center lg:justify-end px-6 lg:px-0">
+          <img src={comicM} alt="Comic Magazine" className="w-full max-w-sm sm:max-w-md lg:max-w-full object-contain" />
+        </div>
 
-              <div className="grid grid-cols-12 items-center py-6 bg-[#F6ECFF] rounded-2xl gap-[93px] my-6">
-                  <div className="words col-span-5 pl-[48px]">
-                      <h6 className="font-bold text-[32px]">Awesome educational flash cards with gamified learning concepts.</h6> 
-                      <p>We prepare young minds for an innovative future by igniting imagination, fostering essential soft skills, and providing engaging hands-on learning experiences in coding, STEM, and interactive classes.</p>
-                      <PurchaseBut />
-                  </div> 
-                  
-                     <div className="col-span-7">
-                      <img src= { flashCard } alt="" />
-                  </div>
+      </div>
 
-                        
+      {/* Card 2 — Educational Books (image left, text right) */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 items-center py-6 gap-6 lg:gap-[93px] bg-[#EDEFFF] rounded-2xl my-6">
 
-              </div>
-            </div>
-        </>
-      
+        <div className="lg:col-span-7 flex justify-center lg:justify-start px-6 lg:pl-[48px] lg:pr-0 order-2 lg:order-1">
+          <img src={educationalB} alt="Educational Books" className="w-full max-w-sm sm:max-w-md lg:max-w-full object-contain" />
+        </div>
+
+        <div className="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left px-6 lg:px-0 order-1 lg:order-2">
+          <h6 className="text-2xl sm:text-3xl lg:text-[32px] font-bold max-w-full lg:w-[381px]">
+            Educational Books Teaching Tech, Business, Economics & Skills
+          </h6>
+          <p className="font-light text-sm sm:text-base lg:text-[16px] max-w-full lg:w-[382px] mt-3">
+            We prepare young minds for an innovative future by igniting imagination, fostering essential soft skills, and providing engaging hands-on learning experiences in coding, STEM, and interactive classes.
+          </p>
+          <div className="mt-4">
+            <PurchaseBut />
+          </div>
+        </div>
+
+      </div>
+
+      {/* Card 3 — Flash Cards (text left, image right) */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 items-center py-6 gap-6 lg:gap-[93px] bg-[#F6ECFF] rounded-2xl my-6">
+
+        <div className="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left px-6 lg:pl-[48px] lg:pr-0 order-1">
+          <h6 className="text-2xl sm:text-3xl lg:text-[32px] font-bold max-w-full">
+            Awesome educational flash cards with gamified learning concepts.
+          </h6>
+          <p className="font-light text-sm sm:text-base lg:text-[16px] max-w-full mt-3">
+            We prepare young minds for an innovative future by igniting imagination, fostering essential soft skills, and providing engaging hands-on learning experiences in coding, STEM, and interactive classes.
+          </p>
+          <div className="mt-4">
+            <PurchaseBut />
+          </div>
+        </div>
+
+        <div className="lg:col-span-7 flex justify-center lg:justify-end px-6 lg:px-0 order-2">
+          <img src={flashCard} alt="Flash Cards" className="w-full max-w-sm sm:max-w-md lg:max-w-full object-contain" />
+        </div>
+
+      </div>
+
+    </div>
   )
 }
